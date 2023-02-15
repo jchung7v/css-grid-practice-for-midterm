@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Midterm Prep - Grid Layouts - Area</title>
+    <meta charset="utf-8" />
+    <style>
+      html,
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .item1 {
+        grid-area: navbar;
+      }
+      .item2 {
+        grid-area: logo;
+      }
+      .item3 {
+        grid-area: header;
+      }
+      .item4 {
+        grid-area: content;
+      }
+      .item5 {
+        grid-area: sidebar;
+      }
+      .item6 {
+        grid-area: facebook;
+      }
+      .item7 {
+        grid-area: blogs;
+      }
+      .item8 {
+        grid-area: secondary;
+      }
+      .item9 {
+        grid-area: game;
+      }
+      .item10 {
+        grid-area: contact;
+      }
+      .item11 {
+        grid-area: tutorials;
+      }
+      .item12 {
+        grid-area: footer;
+      }
+
+      .grid-container {
+        display: grid;
+
+        width: 100vh;
+        height: 100vh;
+
+        grid-template-areas:
+          "navbar navbar navbar"
+          "logo header header"
+          "content content sidebar"
+          "content content facebook"
+          "content content blogs"
+          "content content secondary"
+          "content content game"
+          "content content contact"
+          "content content tutorials"
+          "footer footer footer";
+
+        /* use a percentage of the full viewport width */
+        /* 25vw will resolve to 25% of the current viewport width */
+        grid-template-columns: 25vw 40vw 35vw;
+        grid-template-rows: 5vh 20vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 5vh;
+      }
+
+      .grid-container > div {
+        /* use flex to center text in containers */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: grey;
+
+        /* set margins and paddings for all containers */
+        /* here padding is useless because of the flex above */
+        padding: 10px 0;
+        margin: 5px 5px;
+
+        /* set font size to 20px */
+        font-size: 20px;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div class="item1">Navigation</div>
+      <div class="item2">Logo</div>
+      <div class="item3">Header AD</div>
+      <div class="item4">Content</div>
+      <div class="item5">Sidebar AD</div>
+      <div class="item6">Facebook Box</div>
+      <div class="item7">Latest Blogs</div>
+      <div class="item8">Secondary Link</div>
+      <div class="item9">Game Link</div>
+      <div class="item10">Contact Link</div>
+      <div class="item11">Tutorials</div>
+      <div class="item12">Footer</div>
+    </div>
+  </body>
+</html>
